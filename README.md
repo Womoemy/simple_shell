@@ -20,8 +20,8 @@ Standard functions and system calls employed in simple_shell include:
 * [man_1_simple_shell](man_1_simple_shell) - Manual page for the simple_shell
 * [shell.h](shell.h) - program header file
 * [builtins.c](builtins.c) - major builtin functions
-  * `check_for_builtins` - checks to see if the user's command matches a builtin
-  * `new_exit` - exits the shell with the option of a specified status
+  * `check_builtins` - checks to see if the user's command matches a builtin
+  * `exit_shell` - exits the shell with the option of a specified status
   * `_env` - prints the shell's environment variables to the standard output
   * `new_setenv` - initializes a new environment variable, or modifies an existing one
   * `new_unsetenv` - removes an environment variable
@@ -59,6 +59,8 @@ Standard functions and system calls employed in simple_shell include:
   * `_strlen` - calculates the length of a string
 * [tokenize.c](tokenize.c) - tokenizing function
   * `tokenize` - creates an array of tokens from a buffer with a specified delimiter
+
+* [main.c](main.c) - essential functions to the shell and main function of the program
 
 ## Requirements
 
