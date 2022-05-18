@@ -1,7 +1,7 @@
-#include "shell.h"
+#include "main.h"
 
 /**
- * get_builtin - builtin that pass the command in the arg
+ * get_builtin - builtin that pais the command in the arg
  * @cmd: command
  * Return: function pointer of the builtin command
  */

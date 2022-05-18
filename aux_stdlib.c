@@ -1,18 +1,18 @@
-#include "shell.h"
+#include "main.h"
 
 /**
- * get_len - Get the length of a number.
+ * get_len - Get the lenght of a number.
  * @n: type int number.
- * Return: length of a number.
+ * Return: Lenght of a number.
  */
 int get_len(int n)
 {
 	unsigned int n1;
-	int length = 1;
+	int lenght = 1;
 
 	if (n < 0)
 	{
-		length++;
+		lenght++;
 		n1 = n * -1;
 	}
 	else
@@ -21,11 +21,11 @@ int get_len(int n)
 	}
 	while (n1 > 9)
 	{
-		length++;
+		lenght++;
 		n1 = n1 / 10;
 	}
 
-	return (length);
+	return (lenght);
 }
 /**
  * aux_itoa - function converts int to string.
@@ -35,14 +35,14 @@ int get_len(int n)
 char *aux_itoa(int n)
 {
 	unsigned int n1;
-	int length = get_len(n);
+	int lenght = get_len(n);
 	char *buffer;
 
-	buffer = malloc(sizeof(char) * (length + 1));
+	buffer = malloc(sizeof(char) * (lenght + 1));
 	if (buffer == 0)
 		return (NULL);
 
-	*(buffer + length) = '\0';
+	*(buffer + lenght) = '\0';
 
 	if (n < 0)
 	{
@@ -54,11 +54,11 @@ char *aux_itoa(int n)
 		n1 = n;
 	}
 
-	length--;
+	lenght--;
 	do {
-		*(buffer + length) = (n1 % 10) + '0';
+		*(buffer + lenght) = (n1 % 10) + '0';
 		n1 = n1 / 10;
-		length--;
+		lenght--;
 	}
 	while (n1 > 0)
 		;
